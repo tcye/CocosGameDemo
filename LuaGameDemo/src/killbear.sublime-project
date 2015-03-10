@@ -1,0 +1,20 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"run.bat"
+			],
+			"encoding": "cp936",
+			"name": "Run Game",
+			"working_dir": "$project_path"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "/D/作业提交/MyGameDemo/src"
+		}
+	]
+}
