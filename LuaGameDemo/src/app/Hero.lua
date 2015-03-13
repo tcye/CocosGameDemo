@@ -135,6 +135,20 @@ function Hero:updatePositionOnMap()
 		end
 		self.position.x = self.position.x + vx
 		self.position.y = self.position.y + vy
+		-- 放大招时也不能跑出地图外去啊
+		local mapwidth = self:getScene().mapwidth
+		local mapheight = self:getScene().mapheight
+		if self.position.x < 0 then
+			self.position.x = 0
+		elseif self.position.x > mapwidth then
+		 	self.position.x = mapwidth
+		end
+		if self.position.y < 0 then
+			self.position.y = 0
+		elseif self.position.y > mapheight/4 then
+		 	self.position.y = mapheight/4
+		end
+
 	else
 		Role.updatePositionOnMap(self)
 	end
